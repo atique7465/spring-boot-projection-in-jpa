@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "4febf9eb-558a-4b6e-a9eb-f01909a21aad",
+		"name": "Spring Boot projection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10431930"
+	},
+	"item": [
+		{
+			"name": "Save Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentId\" : \"2022_001_001\",\r\n    \"name\" : \"Someone\",\r\n    \"gender\" : \"Male\",\r\n    \"department\" : \"CSE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/projection-in-jpa-1.0/api/v1/student",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"projection-in-jpa-1.0",
+						"api",
+						"v1",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentId\" : \"2022_001_001\",\r\n    \"name\" : \"Someone updated\",\r\n    \"gender\" : \"Male\",\r\n    \"department\" : \"CSE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/projection-in-jpa-1.0/api/v1/student/2022_001_001",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"projection-in-jpa-1.0",
+						"api",
+						"v1",
+						"student",
+						"2022_001_001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Student By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/projection-in-jpa-1.0/api/v1/student/2022_001_001",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"projection-in-jpa-1.0",
+						"api",
+						"v1",
+						"student",
+						"2022_001_001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DepartmentReport",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/projection-in-jpa-1.0/api/v1/student/department-report/Female",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"projection-in-jpa-1.0",
+						"api",
+						"v1",
+						"student",
+						"department-report",
+						"Female"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enrollment Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/projection-in-jpa-1.0/api/v1/student/enrollment-report/2022-07-18",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"projection-in-jpa-1.0",
+						"api",
+						"v1",
+						"student",
+						"enrollment-report",
+						"2022-07-18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Student By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/projection-in-jpa-1.0/api/v1/student/2022_001_001",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"projection-in-jpa-1.0",
+						"api",
+						"v1",
+						"student",
+						"2022_001_001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/projection-in-jpa-1.0/api/v1/student",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"projection-in-jpa-1.0",
+						"api",
+						"v1",
+						"student"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
