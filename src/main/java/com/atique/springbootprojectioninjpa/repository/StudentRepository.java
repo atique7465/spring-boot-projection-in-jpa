@@ -17,11 +17,17 @@ import java.util.Optional;
 
 public interface StudentRepository extends JpaRepository<StudentEntity, Long> {
 
-    //These are Derived Query Methods, ref: https://www.baeldung.com/spring-data-derived-queries
+    //Derived Query Methods, ref: https://www.baeldung.com/spring-data-derived-queries
 
     Optional<StudentEntity> findByStudentId(String StudentEntity);
 
     void deleteByStudentId(String StudentEntity);
+
+
+
+    //Projection
+    //ref1: https://www.baeldung.com/jpa-queries-custom-result-with-aggregation-functions
+    //ref2: https://www.youtube.com/watch?v=2SV7QODVHAE&ab_channel=ThorbenJanssen
 
     //Interface Base Projection with native query
     @Query(value = "select department as departmentName, count(*) as studentCount FROM student_v2 where gender = :gender group by department", nativeQuery = true)
