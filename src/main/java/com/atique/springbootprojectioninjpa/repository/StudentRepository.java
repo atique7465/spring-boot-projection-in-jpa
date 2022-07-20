@@ -28,7 +28,7 @@ public interface StudentRepository extends JpaRepository<StudentEntity, Long> {
     List<DepartmentReportProjector> findDepartmentReportProjectors(@Param("gender") String gender);
 
     //Interface Base Projection with native query and aggregate functions
-    @Query(value = "select DATE_FORMAT(created, '%Y-%m-%d') as enrollDate, gender as StudentGender, count(*) as studentCount " +
+    @Query(value = "select DATE_FORMAT(created, '%Y-%m-%d') as enrollDate, gender as studentGender, count(*) as studentCount " +
             "FROM student_v2 where DATE_FORMAT(created, '%Y-%m-%d') >= :fromDate group by DATE_FORMAT(created, '%Y-%m-%d'), gender ", nativeQuery = true)
     List<EnrollmentReportProjector> findEnrollmentReportProjectors(@Param("fromDate") String fromDate); // '2022-07-18'
 }
